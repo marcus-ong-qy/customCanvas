@@ -24,7 +24,7 @@ def gen_area_data(csv_file_path, box_range, time_start, time_end):
             if box_range[2] < float(line[2]) < box_range[3] and box_range[0] < float(line[3]) < box_range[1] and \
                     time_start <= time <= time_end:
 
-                mmsi = line[0]
+                mmsi = str(line[0])
                 pos = (float(line[2]), float(line[3]))
                 name = line[7]
                 if mmsi not in area_data.keys():
